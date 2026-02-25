@@ -100,127 +100,127 @@
 //   </div>
 
 
-'use client';
-import { useState } from 'react';
+// 'use client';
+// import { useState } from 'react';
 
-export default function Page() {
+// export default function Page() {
 
-  const [name, setName] = useState('harshini');
-  const [count, setCount] = useState(0);
-  const [show, setShow] = useState(false);
-  const [color, setColor] = useState('red');
-  const [likes, setLikes] = useState(0);
-  const [text, setText] = useState('');
-  const [age,setAge]=useState('');
-  const [password, setPassword] = useState('');
-const [showPassword, setShowPassword] = useState(false);
-const [status, setStatus] = useState(false);
-const [counter, setCounter] = useState(0);
+//   const [name, setName] = useState('harshini');
+//   const [count, setCount] = useState(0);
+//   const [show, setShow] = useState(false);
+//   const [color, setColor] = useState('red');
+//   const [likes, setLikes] = useState(0);
+//   const [text, setText] = useState('');
+//   const [age,setAge]=useState('');
+//   const [password, setPassword] = useState('');
+// const [showPassword, setShowPassword] = useState(false);
+// const [status, setStatus] = useState(false);
+// const [counter, setCounter] = useState(0);
 
-  const toggleColor = () => {
-    setColor(color === 'lightpink' ? 'lightblue' : 'lightpink');
-  };
+//   const toggleColor = () => {
+//     setColor(color === 'lightpink' ? 'lightblue' : 'lightpink');
+//   };
 
-  return (
+//   return (
 
-    <div style={{ backgroundColor: color, padding: '20px' }}>
+//     <div style={{ backgroundColor: color, padding: '20px' }}>
 
-      <h3 style={{color: 'black'}}>Name </h3>
+//       <h3 style={{color: 'black'}}>Name </h3>
 
-      {/* <input
-        type="text"
-        placeholder="Enter your name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      /> */}
+//       {/* <input
+//         type="text"
+//         placeholder="Enter your name"
+//         value={name}
+//         onChange={(e) => setName(e.target.value)}
+//       /> */}
 
-      <h2>Hello, {name}</h2>
+//       <h2>Hello, {name}</h2>
 
-      <hr />
+//       <hr />
 
-      <h3 style={{color: 'black'}}>Click Counter</h3>
+//       <h3 style={{color: 'black'}}>Click Counter</h3>
 
-      <button onClick={() => setCount(prev => prev + 1)}>
-        Click Count: {count}
-      </button>
+//       <button onClick={() => setCount(prev => prev + 1)}>
+//         Click Count: {count}
+//       </button>
 
-      <hr />
+//       <hr />
 
-      <h3 style={{color: 'black'}}>Show / Hide Message</h3>
+//       <h3 style={{color: 'black'}}>Show / Hide Message</h3>
 
-      <button onClick={() => setShow(!show)}>
-        Toggle Message
-      </button>
+//       <button onClick={() => setShow(!show)}>
+//         Toggle Message
+//       </button>
 
-      {show && <h2 style={{color: '#380df9'}}>Welcome Participants!</h2>}
+//       {show && <h2 style={{color: '#380df9'}}>Welcome Participants!</h2>}
 
-      <hr />
+//       <hr />
 
-      <h3 style={{color: 'black'}} >Change Background Color</h3>
+//       <h3 style={{color: 'black'}} >Change Background Color</h3>
 
-      <button onClick={toggleColor}>
-        Toggle Background Color
-      </button>
+//       <button onClick={toggleColor}>
+//         Toggle Background Color
+//       </button>
 
-      <hr />
+//       <hr />
 
-      <h3 style={{color: 'black'}}>Like Button</h3>
+//       <h3 style={{color: 'black'}}>Like Button</h3>
 
-      <button onClick={() => setLikes(prev => prev + 1)}>
-        ❤️ Like
-      </button>
+//       <button onClick={() => setLikes(prev => prev + 1)}>
+//         ❤️ Like
+//       </button>
 
-      <h2 style={{color: 'red'}}>Likes: {likes}</h2>
-      <textarea
-       placeholder="Type something..."
-       value={text}
-       onChange={(e) => setText(e.target.value)}
-      />
+//       <h2 style={{color: 'red'}}>Likes: {likes}</h2>
+//       <textarea
+//        placeholder="Type something..."
+//        value={text}
+//        onChange={(e) => setText(e.target.value)}
+//       />
 
-<h3>Characters: {text.length}</h3>
+// <h3>Characters: {text.length}</h3>
 
-<input
-  type="number"
-  placeholder="Enter age"
-   style={{color: 'black'}}
-  value={age}
-  onChange={(e) => setAge(e.target.value)}
-/>
+// <input
+//   type="number"
+//   placeholder="Enter age"
+//    style={{color: 'black'}}
+//   value={age}
+//   onChange={(e) => setAge(e.target.value)}
+// />
 
-<h3>
-  {age && (age >= 18 ? 'Adult' : 'Minor')}
-</h3>
+// <h3>
+//   {age && (age >= 18 ? 'Adult' : 'Minor')}
+// </h3>
 
-<input
-  type={showPassword ? 'text' : 'password'}
-  placeholder="Enter password"
-  style={{color: 'black'}}
-  value={password}
-  onChange={(e) => setPassword(e.target.value)}
-/>
+// <input
+//   type={showPassword ? 'text' : 'password'}
+//   placeholder="Enter password"
+//   style={{color: 'black'}}
+//   value={password}
+//   onChange={(e) => setPassword(e.target.value)}
+// />
 
-<button onClick={() => setShowPassword(!showPassword)}>
-  {showPassword ? 'Hide' : 'Show'}
-</button>
+// <button onClick={() => setShowPassword(!showPassword)}>
+//   {showPassword ? 'Hide' : 'Show'}
+// </button>
 
-<button onClick={() => setStatus(!status)}>
-  Toggle
-</button>
+// <button onClick={() => setStatus(!status)}>
+//   Toggle
+// </button>
 
-<h3>{status ? 'ON' : 'OFF'}</h3>
+// <h3>{status ? 'ON' : 'OFF'}</h3>
 
-<button onClick={() => setCounter(counter + 1)}>Increase  </button>
+// <button onClick={() => setCounter(counter + 1)}>Increase  </button>
 
-<button onClick={() => setCounter(counter - 1)}>Decrease  </button>
+// <button onClick={() => setCounter(counter - 1)}>Decrease  </button>
 
-<button onClick={() => setCounter(0)}>Reset</button>
+// <button onClick={() => setCounter(0)}>Reset</button>
 
-<h3>Counter: {counter}</h3>
-    </div>
+// <h3>Counter: {counter}</h3>
+//     </div>
 
-  );
+//   );
 
-}
+// }
 // tailwind css card 
 
 
@@ -270,3 +270,274 @@ const [counter, setCounter] = useState(0);
 //     </div>
 //   );
 // }
+//to do list 
+
+// 'use client';
+// import { useState } from "react";
+
+// export default function Level3() {
+
+//   const [task, setTask] = useState("");
+//   const [tasks, setTasks] = useState([]);
+
+ 
+//   const addTask = () => {
+//     if (task.trim() === "") return;
+//     setTasks([...tasks, task]);
+//     setTask("");
+//   };
+
+//   return (
+//     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
+
+//       <div className="bg-white shadow-lg rounded-xl p-6 w-96">
+
+//         <h1 className="text-2xl font-bold mb-4 text-indigo-600">
+//           📝 To-Do List
+//         </h1>
+
+       
+//         <div className="flex gap-2 mb-4">
+//           <input
+//             type="text"
+//             placeholder="Enter task..."
+//             value={task}
+//             onChange={(e) => setTask(e.target.value)}
+//             className="border rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-indigo-400"
+//           />
+
+//           <button
+//             onClick={addTask}
+//             className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
+//           >
+//             Add
+//           </button>
+//         </div>
+
+       
+//         <ul className="space-y-2">
+//           {tasks.map((t, index) => (
+//             <li
+//               key={index}
+//               className="bg-black-100 px-3 py-2 rounded-lg"
+//             >
+//               ✅ {t}
+//             </li>
+//           ))}
+//         </ul>
+
+//       </div>
+
+//     </div>
+//   );
+// }
+
+//add to cart quantity
+// 'use client';
+// import { useState } from "react";
+
+// export default function CartQuantity() {
+
+//   const [quantity, setQuantity] = useState(0);
+
+//   return (
+//     <div className="min-h-screen flex items-center justify-center bg-gray-100">
+
+//       <div className="bg-white p-6 rounded-xl shadow-lg w-80 text-center">
+
+      
+//         <h2 className="text-2xl font-bold text-indigo-600 mb-4">
+//           🛒 Product: Shoes
+//         </h2>
+
+        
+//         <p className="text-lg mb-4">
+//           Quantity:<span className="font-bold text-indigo-700 text-xl">
+//   {quantity}
+// </span>
+//         </p>
+
+       
+//         <div className="flex justify-center gap-4">
+
+//           <button
+//             onClick={() => setQuantity(quantity - 1)}
+//             className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
+//           >
+//             −
+//           </button>
+
+//           <button
+//             onClick={() => setQuantity(quantity + 1)}
+//             className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
+//           >
+//             +
+//           </button>
+
+//         </div>
+
+//       </div>
+
+//     </div>
+//   );
+// }
+
+//theme togglle
+
+// 'use client';
+// import { useState } from "react";
+
+// export default function ThemeToggle() {
+
+//   const [darkMode, setDarkMode] = useState(false);
+
+//   return (
+//     <div className={darkMode
+//       ? "min-h-screen flex items-center justify-center bg-gray-900 text-white"
+//       : "min-h-screen flex items-center justify-center bg-gray-100 text-black"
+//     }>
+
+//       <div className="p-6 rounded-xl shadow-lg bg-white dark:bg-gray-800">
+
+//         <h2 className="text-2xl font-bold mb-4">
+//           Theme Toggle
+//         </h2>
+
+//         <button
+//           onClick={() => setDarkMode(!darkMode)}
+//           className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
+//         >
+//           {darkMode ? "☀ Light Mode" : "🌙 Dark Mode"}
+//         </button>
+
+//       </div>
+
+//     </div>
+//   );
+// }
+
+//quiz
+
+// 'use client';
+// import { useState } from "react";
+
+// export default function SimpleQuiz() {
+
+//   const [result, setResult] = useState("");
+
+//   const checkAnswer = (answer) => {
+//     if (answer === "sunflower") {
+//       setResult("✅ Correct!");
+//     } else {
+//       setResult("❌ Wrong!");
+//     }
+//   };
+
+//   return (
+//     <div className="min-h-screen flex items-center justify-center bg-gray-100">
+
+//       <div className="bg-white p-6 rounded-xl shadow-lg w-96 text-center">
+
+//         {/* Question */}
+//         <h2 className="text-xl font-bold mb-4 text-indigo-600">
+//           🌼 Which flower is yellow and follows the sun?
+//         </h2>
+
+//         {/* Options */}
+//         <div className="flex flex-col gap-3 mb-4">
+
+//           <button
+//             onClick={() => checkAnswer("rose")}
+//             className="bg-red-500 text-white py-2 rounded-lg hover:bg-red-600"
+//           >
+//             Rose
+//           </button>
+
+//           <button
+//             onClick={() => checkAnswer("sunflower")}
+//             className="bg-yellow-500 text-white py-2 rounded-lg hover:bg-yellow-600"
+//           >
+//             Sunflower
+//           </button>
+
+//         </div>
+
+//         {/* Result */}
+//         {result && (
+//           <p className="text-lg font-bold">
+//             {result}
+//           </p>
+//         )}
+
+//       </div>
+
+//     </div>
+//   );
+// }
+
+//multiple counters
+'use client';
+import { useState } from "react";
+
+export default function MultipleCounters() {
+
+  const [count1, setCount1] = useState(0);
+  const [count2, setCount2] = useState(0);
+  const [count3, setCount3] = useState(0);
+
+  return (
+    <div className="min-h-screen bg-white flex items-center justify-center">
+
+      <div className="bg-blue-50 p-6 rounded-xl shadow-lg w-96">
+
+        <h2 className="text-2xl font-bold text-blue-700 mb-6 text-center">
+          Multiple Counters
+        </h2>
+
+        {/* Counter 1 */}
+        <div className="flex justify-between items-center mb-4">
+          <span className="font-semibold text-black text-lg">
+            Counter 1: {count1}
+          </span>
+
+          <button
+            onClick={() => setCount1(count1 + 1)}
+            className="bg-blue-500 text-white px-3 py-1 rounded-lg"
+          >
+            +
+          </button>
+        </div>
+
+        {/* Counter 2 */}
+        <div className="flex justify-between items-center mb-4">
+          <span className="font-semibold text-black text-lg">
+            Counter 2: {count2}
+          </span>
+
+          <button
+            onClick={() => setCount2(count2 + 1)}
+            className="bg-green-500 text-white px-3 py-1 rounded-lg"
+          >
+            +
+          </button>
+        </div>
+
+        {/* Counter 3 */}
+        <div className="flex justify-between items-center">
+          <span className="font-semibold text-black text-lg">
+            Counter 3: {count3}
+          </span>
+
+          <button
+            onClick={() => setCount3(count3 + 1)}
+            className="bg-purple-500 text-white px-3 py-1 rounded-lg"
+          >
+            +
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  );
+}
